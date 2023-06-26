@@ -21,6 +21,10 @@ def loop_merge_sort(l1, l2):
 if __name__ == '__main__':
     L1 = [1, 4, 7, 11, 24, 32]
     L2 = [3, 6, 10, 22, 29, 41]
-    l3 = loop_merge_sort(L1, L2)
-    print(l3)
+    # l3 = loop_merge_sort(L1, L2)
+    # print(l3)
 
+    # 法2
+    l4 = L1 + L2
+    l4.sort()
+    print(l4)
