@@ -14,8 +14,9 @@ class Solution(object):
                 return [i, nums.index(num, i+1)]
 
 
-solution = Solution()
-list = [2, 7, 11, 15]
-target = 9
-nums = solution.twoSum(list, target)
-print(nums)
+if __name__ == '__main__':
+    solution = Solution()
+    list = [2, 7, 11, 15]
+    target = 9
+    nums = solution.twoSum(list, target)
+    print(nums)
