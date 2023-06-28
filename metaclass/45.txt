@@ -1,0 +1,6 @@
+介绍Cython，Pypy Cpython Numba各有什么缺点
+
+
+Pypy是非常理想的Python解释器，最大的瑕疵就是对部分库的兼容问题。
+Cython是一种Python + C的便利性组合，转为C编译的扩展执行效率非常高，但使用相对麻烦，移植CPython项目代价较高。
+Numba更适合针对性优化，效率高，并且不会大幅度的改变普通的Python代码。
