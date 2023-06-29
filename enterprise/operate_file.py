@@ -2,10 +2,11 @@
 # 方法1
 from mmap import mmap
 
-from Tools.scripts.finddiv import process
+# from Tools.scripts.untabify import process
 
 
-def get_lines(fp):
+# 方法1
+def get_lines():
     # with open('file.txt', 'rb') as f:
     #     return f.readlines()
     """
@@ -16,24 +17,28 @@ def get_lines(fp):
     #     for i in f:
     #         yield i
     # 是设置下每次返回的行数较好，否则读取次数太多。
-    # l = []
-    # with open('file.txt', 'rb') as f:
-    #     data = f.readlines(100)
-    # l.append(data)
-    # yield l
+    l = []
+    with open('file.txt', 'rb') as f:
+        data = f.readlines(60000)
+    l.append(data)
+    yield l
+
+
+# 方法2
+def get_lines2(fp):
     with open(fp, "r+") as f:
         m = mmap(f.fileno(), 0)
     tmp = 0
     for i, char in enumerate(m):
         if char == b"\n":
             yield m[tmp:i + 1].decode()
-    tmp = i + 1
+            tmp = i + 1
 
 
 if __name__ == '__main__':
-    # for e in get_lines():
-    #     process(e)  # 处理每一行数据
-    for i in get_lines("file.txt"):
+    for e in get_lines():
+        print(e)
+    for i in get_lines2("file.txt"):
         print(i)
 
 
