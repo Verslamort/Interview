@@ -1,0 +1,5 @@
+cookie 和session 的区别？
+
+作用范围不同Cookie保存在客户端（浏览器),Session保存在服务器端。存取方式的不同,Cookie 只能保存ASCII,Session可以存任意数据类型，
+一般情况下我们可以在Session中保存一些常用变量信息，比如说UserId等。
+
