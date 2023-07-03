@@ -1,0 +1,17 @@
+谈一下HTTP协议以及协议头部中表示数据类型的字段？
+
+HTTP协议(超文本传输协议HyperText Transfer Protocol)，它是基于TCP协议的应用层传输协议，简单来说就是客户端和服务端进行数据传输的一种规则
+是一种无状态协议, HTTP协议本身不会对发送过的请求和相应的通信状态进行持久化处理。这样做的目的是为了保持HTTP协议的简单性，
+从而能够快速处理大量的事务, 提高效率。
+
+
+HOST
+User-Agent
+Accept
+Accept-Encoding
+Accept-Charset
+Content-Type
+Keep-alive
+cookie
+Referer
+

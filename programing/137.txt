@@ -1,0 +1,13 @@
+HTTP常见请求头？
+
+Accept:text/html,image/*  告诉服务器，浏览器可以接受文本，网页图片
+Accept-Charaset:ISO-8859-1  接受字符编码：iso-8859-1
+Accept-Encoding:gzip,compress  可以接受 gzip,compress压缩后数据
+Accept-Language:zh-cn  浏览器支持的语言
+Host:localhost:8080  浏览器要找的主机
+IF-MODIFIED-Since:Tue,11Jul 2000 18:23:51  告诉服务器这缓存中有这个文件,该文件的时间是...
+Referer:http://localhost:8080/test/abc.html  告诉服务器来自哪里
+User-Agent:Nozilla/4.0(Com...)  告诉服务器浏览器内核
+Cookie：  HTTP请求发送时，会把保存在该请求域名下的所有cookie值一起发送给web服务器。
+Connection:close/Keep-Alive   保持链接，发完数据后，不关闭链接
+Date:  浏览器发送数据的请求时间

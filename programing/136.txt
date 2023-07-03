@@ -1,0 +1,16 @@
+使用Socket套接字需要传入哪些参数 ？
+
+
+UDP套接字
+使用Ipv4的协议族(PF_INET), 和面向消息的数据传输(SOCK_DGRAM)， 对应的第三个参数只能是IPPROTO_UDP
+
+int udp_socket = socket(PF_INET, SOCK_DGRAM, IPPROTO_UDP)
+
+
+TCP套接字
+使用Ipv4的协议族(PF_INET), 和面向消息的数据传输(SOCK_STREAM)， 对应的第三个参数只能是IPPROTO_TCP
+
+int tcp_socket = socket(PF_INET, SOCK_STREAM, IPPROTO_TCP)
+或
+int tcp_socket = socket(PF_INET, SOCK_STREAM, 0)
+
