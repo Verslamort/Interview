@@ -40,17 +40,24 @@ class Solution(object):
     def listCross(self, headA, headB):
         A = headA
         B = headB
-        while A != B:
-            A = A.next if A else headB
-            B = B.next if B else headA
+        while A.next != B:
+            if A:
+                A = A.next
+            else:
+                A = headB
+            if B:
+                B = B.next
+            else:
+                B = headA
         return A
 
 
 if __name__ == '__main__':
-    l1 = ListNode(1, ListNode(2, ListNode(3, ListNode(6, ListNode(7)))))
-    l2 = ListNode(4, ListNode(5, ListNode(6, ListNode(7))))
+    crossNode = ListNode(6, ListNode(7))
+    l1 = ListNode(1, ListNode(2, ListNode(3, crossNode)))
+    l2 = ListNode(4, ListNode(5, crossNode))
     res = Solution().listCross(l1, l2)
-    print(res)
+    print(res.val)
     r = Solute().getIntersectionNode(l1, l2)
-    print(r)
+    print(r.val)
 
